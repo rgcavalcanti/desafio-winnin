@@ -3,12 +3,12 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   :root {
     font-family: 'Open Sans', sans-serif;
-    --color-purple: #4B3EE0;
-    --color-dark-purple: #181169;
+    --color-purple: #6324C6;
     --color-white: #FFFFFF;
     --color-black: #01110A;
-    --color-yellow: #E6AF2E;
-    --color-grey: #7A7A7A;
+    --color-yellow: #FFB800;
+    --color-grey: #A7B0BE;
+;
   }
 
   * {

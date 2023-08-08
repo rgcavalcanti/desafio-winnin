@@ -12,8 +12,8 @@ export const Article: React.FC<Props> = ({ article }) => {
     <Card>
       <Thumbnail src={thumbnail} />
       <Content>
-        <Title>{title}</Title>
-        <CreationInfo>
+        <Title data-cy="title">{title}</Title>
+        <CreationInfo data-cy="info">
           enviado {formatText.pastTime(created_utc)} por <User>{author}</User>
         </CreationInfo>
         <Domain>dominio.io</Domain>

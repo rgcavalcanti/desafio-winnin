@@ -31,14 +31,16 @@ const List = styled.ul`
 
 const Link = styled(NavLink)`
   width: 150px;
-  background-color: var(--color-purple);
+  background-color: var(--color-grey);
   color: var(--color-white);
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   text-decoration: none;
-  
+  transition: background-color 100ms;
+
+  &:hover,
   &.active {
-    background-color: var(--color-dark-purple);
+    background-color: var(--color-purple);
   }
 `;

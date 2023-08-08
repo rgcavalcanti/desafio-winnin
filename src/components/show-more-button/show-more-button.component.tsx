@@ -6,7 +6,7 @@ type Props = {
 
 export const ShowMoreButton: React.FC<Props> = ({
   handleShowMoreArticles: showMoreArticles,
-}) => <Button onClick={showMoreArticles}>+ Ver mais</Button>;
+}) => <Button data-cy="button" onClick={showMoreArticles}>+ Ver mais</Button>;
 
 const Button = styled.button`
   background-color: var(--color-purple);
@@ -14,6 +14,6 @@ const Button = styled.button`
   border: none;
   padding: 0.5rem;
   font-size: 1.2rem;
-  border-radius: 4px;
+  border-radius: 8px;
   width: 100%;
 `;
