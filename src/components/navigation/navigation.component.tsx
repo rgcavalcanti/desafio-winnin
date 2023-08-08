@@ -1,16 +1,17 @@
 import { styled } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Navigation = () => (
   <Container>
     <List>
       <li>
-        <Button>Hot</Button>
+        <Link to="/hot">Hot</Link>
       </li>
       <li>
-        <Button>News</Button>
+        <Link to="/news">News</Link>
       </li>
       <li>
-        <Button>Rising</Button>
+        <Link to="/rising">Rising</Link>
       </li>
     </List>
   </Container>
@@ -28,12 +29,16 @@ const List = styled.ul`
   grid-gap: 1rem;
 `;
 
-const Button = styled.button`
+const Link = styled(NavLink)`
   width: 150px;
   background-color: var(--color-purple);
   color: var(--color-white);
   border-radius: 4px;
-  border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  text-decoration: none;
+  
+  &.active {
+    background-color: var(--color-dark-purple);
+  }
 `;

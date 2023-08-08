@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     font-family: 'Open Sans', sans-serif;
     --color-purple: #4B3EE0;
+    --color-dark-purple: #181169;
     --color-white: #FFFFFF;
     --color-black: #01110A;
     --color-yellow: #E6AF2E;
