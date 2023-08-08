@@ -1,17 +1,20 @@
 import { styled } from "styled-components";
 import { Article } from "./article.component";
 
-export const ArticlesList = () => (
+type Props = {
+  articles: Array<Article>;
+};
+
+export const ArticlesList: React.FC<Props> = ({ articles }) => (
   <List>
-    <li>
-      <Article />
-    </li>
-    <li>
-      <Article />
-    </li>
+    {articles.map((article) => (
+      <li key={article.id}>
+        <Article article={article} />
+      </li>
+    ))}
   </List>
 );
 
-const List = styled.ul `
+const List = styled.ul`
   list-style: none;
-`
+`;

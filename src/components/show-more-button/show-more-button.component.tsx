@@ -1,6 +1,12 @@
 import { styled } from "styled-components";
 
-export const ShowMoreButton = () => <Button>+ Ver mais</Button>;
+type Props = {
+  handleShowMoreArticles: () => void;
+};
+
+export const ShowMoreButton: React.FC<Props> = ({
+  handleShowMoreArticles: showMoreArticles,
+}) => <Button onClick={showMoreArticles}>+ Ver mais</Button>;
 
 const Button = styled.button`
   background-color: var(--color-purple);

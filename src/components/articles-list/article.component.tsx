@@ -1,18 +1,26 @@
 import { styled } from "styled-components";
+import { formatText } from "../../helpers/formatText";
 
-export const Article = () => (
-  <Card>
-    <Thumbnail />
-    <Content>
-      <Title>Título do post</Title>
-      <CreationInfo>
-        enviado X horas por <User>autor_nick</User>
-      </CreationInfo>
-      <Domain>dominio.io</Domain>
-    </Content>
-  </Card>
-);
+type Props = {
+  article: Article;
+};
 
+export const Article: React.FC<Props> = ({ article }) => {
+  const { title, created_utc, author, thumbnail } = article;
+
+  return (
+    <Card>
+      <Thumbnail src={thumbnail} />
+      <Content>
+        <Title>{title}</Title>
+        <CreationInfo>
+          enviado {formatText.pastTime(created_utc)} por <User>{author}</User>
+        </CreationInfo>
+        <Domain>dominio.io</Domain>
+      </Content>
+    </Card>
+  );
+};
 const Card = styled.article`
   display: grid;
   grid-auto-flow: column;
@@ -22,7 +30,7 @@ const Card = styled.article`
   border-top: 1px solid var(--color-grey);
 `;
 
-const Thumbnail = styled.div`
+const Thumbnail = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 8px;
