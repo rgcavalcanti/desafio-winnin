@@ -53,7 +53,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
-  color: var(--color-black);
+  color: var(--text-color);
   margin: 0px;
 `;
 

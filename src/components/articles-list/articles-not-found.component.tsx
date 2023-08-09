@@ -16,6 +16,7 @@ const Content = styled.div`
   grid-gap: 1rem;
   padding: 1rem;
   height: 300px;
+  color: var(--text-color);
 `;
 
 const Title = styled.h2`
