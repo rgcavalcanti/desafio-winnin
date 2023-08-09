@@ -11,8 +11,8 @@ export const router = createBrowserRouter([
     element: <App context="hot" />,
   },
   {
-    path: "/news",
-    element: <App context="news" />,
+    path: "/new",
+    element: <App context="new" />,
   },
   {
     path: "/rising",

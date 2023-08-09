@@ -2,23 +2,29 @@ import { styled } from "styled-components";
 import { ArticlesList } from "./components/articles-list/articles-list.component";
 import { Header } from "./components/header/header.component";
 import { Navigation } from "./components/navigation/navigation.component";
-import { ShowMoreButton } from "./components/show-more-button/show-more-button.component";
-import { useArticles } from "./contexts/articles.context";
+import { useArticles } from "./hooks/useArticles";
+import { ScrollTop } from "./components/scroll-top/scroll-top.component";
 
 type Props = {
-  context: "hot" | "news" | "rising";
+  context: ArticlesContext;
 };
 
 export const App: React.FC<Props> = ({ context }) => {
-  const { articles, showMoreArticles } = useArticles(context);
+  const { articles, showMoreArticles, isLoading, refetchArticles } =
+    useArticles(context);
 
   return (
     <>
       <Header />
       <Content>
         <Navigation />
-        <ArticlesList articles={articles} />
-        <ShowMoreButton handleShowMoreArticles={showMoreArticles} />
+        <ArticlesList
+          articles={articles}
+          isLoading={isLoading}
+          handleShowMoreArticles={showMoreArticles}
+          handleRefetchArticles={refetchArticles}
+        />
+        <ScrollTop />
       </Content>
     </>
   );
@@ -27,4 +33,8 @@ export const App: React.FC<Props> = ({ context }) => {
 const Content = styled.main`
   max-width: 1024px;
   margin: 0 auto;
+  padding-bottom: 5rem;
+  overflow: auto;
+  display: grid;
+  justify-items: center;
 `;

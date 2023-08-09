@@ -1,4 +1,4 @@
-import { Article } from "./article.component";
+import { Article } from "../article.component";
 
 describe("<Article />", () => {
   it("renders", () => {
@@ -9,6 +9,7 @@ describe("<Article />", () => {
       name: "foobar",
       thumbnail: "fakeimage.jpg",
       title: "Fake Title",
+      permalink: "abc"
     };
 
     cy.mount(<Article article={fakeArticle} />);

@@ -8,7 +8,7 @@ export const Navigation = () => (
         <Link to="/hot">Hot</Link>
       </li>
       <li>
-        <Link to="/news">News</Link>
+        <Link to="/new">News</Link>
       </li>
       <li>
         <Link to="/rising">Rising</Link>
@@ -30,7 +30,7 @@ const List = styled.ul`
 `;
 
 const Link = styled(NavLink)`
-  width: 150px;
+  width: 100px;
   background-color: var(--color-grey);
   color: var(--color-white);
   border-radius: 8px;
@@ -38,6 +38,8 @@ const Link = styled(NavLink)`
   font-size: 1rem;
   text-decoration: none;
   transition: background-color 100ms;
+  display: inline-block;
+  text-align: center;
 
   &:hover,
   &.active {

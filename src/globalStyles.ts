@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-black: #01110A;
     --color-yellow: #FFB800;
     --color-grey: #A7B0BE;
+    --color-blue: #0B77D5;
 ;
   }
 
@@ -15,5 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 `;

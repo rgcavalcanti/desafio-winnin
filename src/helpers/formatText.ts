@@ -5,7 +5,7 @@ const pastTime = (timestamp: number) => {
 
   const today = new Date();
 
-  const pastDate = new Date(timestamp);
+  const pastDate = new Date( Number.parseInt(`${timestamp}`.padEnd(13, "0")));
 
   const relativeTime = today.getTime() - pastDate.getTime();
 
