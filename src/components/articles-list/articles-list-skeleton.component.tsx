@@ -48,15 +48,15 @@ const Card = styled.article`
   grid-column-gap: 1rem;
   grid-template-columns: auto 1fr;
   justify-content: start;
-  padding: 1rem 0;
+  align-items: center;
+  padding: 1rem;
   border-top: 1px solid var(--color-grey);
 `;
 
 const Thumbnail = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
-  background-color: var(--color-grey);
   animation: ${skeletonLoading} 1s linear infinite alternate;
 `;
 
@@ -68,7 +68,7 @@ const Content = styled.div`
 
 const Title = styled.div`
   background-color: var(--color-grey);
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   height: 1rem;
   border-radius: 8px;
@@ -77,7 +77,7 @@ const Title = styled.div`
 
 const CreationInfo = styled.div`
   background-color: var(--color-grey);
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   height: 1rem;
   border-radius: 8px;

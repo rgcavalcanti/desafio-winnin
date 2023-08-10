@@ -33,7 +33,7 @@ export const App: React.FC<Props> = ({ context }) => {
 const Content = styled.main`
   max-width: 1024px;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
   overflow: auto;
   display: grid;
   justify-items: center;

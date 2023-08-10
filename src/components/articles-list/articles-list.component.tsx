@@ -53,6 +53,7 @@ export const ArticlesList: React.FC<Props> = ({
 
 const List = styled.ul`
   list-style: none;
+  width: 100%;
 `;
 
 const Button = styled.button`
@@ -62,8 +63,10 @@ const Button = styled.button`
   padding: 0.5rem;
   font-size: 1.2rem;
   border-radius: 8px;
-  width: 100%;
   max-width: 500px;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  height: 50px;
 
   &:hover {
     cursor: pointer;

@@ -44,16 +44,21 @@ const Button = styled.button<{ showButton: boolean }>`
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  border: none  ;
-  
+  top: 50px;
+  right: 1rem;
+  border: none;
+
   opacity: ${({ showButton }) => (showButton ? 1 : 0)};
   transition: opacity ease-in-out 200ms;
-  
+
   fill: var(--color-white);
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 600px) {
+    bottom: 1rem;
+    top: auto;
   }
 `;

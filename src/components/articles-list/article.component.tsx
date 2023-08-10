@@ -25,7 +25,8 @@ export const Article: React.FC<Props> = ({ article }) => {
           </User>
         </CreationInfo>
         <Domain href={`https://www.reddit.com${permalink}`} target="_blank">
-          {permalink}<OpenLinkIcon />
+          Acessar
+          <OpenLinkIcon />
         </Domain>
       </Content>
     </Card>
@@ -35,16 +36,27 @@ const Card = styled.article`
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
+  align-items: center;
   grid-column-gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
   border-top: 1px solid var(--color-grey);
+
+  @media (min-width: 1024px) {
+    align-items: unset;
+    padding: 1rem 0;
+  }
 `;
 
 const Thumbnail = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   display: inline-block;
+
+  @media (min-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const Content = styled.div`
@@ -55,11 +67,21 @@ const Content = styled.div`
 const Title = styled.h2`
   color: var(--text-color);
   margin: 0px;
+  font-size: 1rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const CreationInfo = styled.span`
   display: inline-block;
   color: var(--color-grey);
+  font-size: 0.8rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 const User = styled.a`
@@ -78,8 +100,17 @@ const Domain = styled.a`
   grid-gap: 0.25rem;
   text-decoration: none;
   fill: var(--color-blue);
+  font-size: 0.8rem;
+
+  svg {
+    height: 100%;
+  }
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
   }
 `;
