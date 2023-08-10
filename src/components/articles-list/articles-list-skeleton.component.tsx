@@ -7,7 +7,7 @@ type Props = {
 
 export const ArticlesListSkeleton: React.FC<Props> = ({ size }) => {
   return (
-    <List>
+    <List data-cy="skeleton">
       {Array(size)
         .fill("")
         .map((_, index) => {

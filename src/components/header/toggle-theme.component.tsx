@@ -9,7 +9,6 @@ export const ToggleTheme = () => {
   const toggleMode = () => {
     setIsDarkMode((oldState) => !oldState);
 
-    console.log(isDarkMode)
     if (isDarkMode) {
       return document.body.classList.remove("dark-mode");
     } else {

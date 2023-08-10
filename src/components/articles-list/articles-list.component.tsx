@@ -33,7 +33,7 @@ export const ArticlesList: React.FC<Props> = ({
 
   return (
     <>
-      <List>
+      <List data-cy="articles-list">
         {articles.map((article) => (
           <li data-cy="article" key={article.id}>
             <Article article={article} />

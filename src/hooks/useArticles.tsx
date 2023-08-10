@@ -17,7 +17,9 @@ export const useArticles = (context: ArticlesContext) => {
       }
     },
     getNextPageParam: (lastPage) => lastPage.nextPage,
-    
+    retry: 1,
+    refetchOnWindowFocus: false,
+    refetchInterval: false,
   });
 
   return {

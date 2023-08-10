@@ -16,7 +16,7 @@ describe("<Article />", () => {
     cy.get('[data-cy="title"]').should("have.text", fakeArticle.title);
     cy.get('[data-cy="info"]').should(
       "have.text",
-      `enviado há 19.578 dias por ${fakeArticle.author}`
+      `enviado há 8.005 dias por u/${fakeArticle.author}`
     );
   });
 });

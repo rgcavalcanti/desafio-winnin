@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const ArticlesNotFound = () => {
   return (
-    <Content>
+    <Content data-cy="missing-articles-message">
       <Title>Ops!</Title>
       <SubTitle>Algo deu errado...</SubTitle>
       <Info>Não foi possível carregar mais artigos =(</Info>
