@@ -9,14 +9,13 @@ describe("<Article />", () => {
       name: "foobar",
       thumbnail: "fakeimage.jpg",
       title: "Fake Title",
-      permalink: "abc"
+      permalink: "abc",
     };
 
     cy.mount(<Article article={fakeArticle} />);
     cy.get('[data-cy="title"]').should("have.text", fakeArticle.title);
-    cy.get('[data-cy="info"]').should(
-      "have.text",
-      `enviado há 8.005 dias por u/${fakeArticle.author}`
-    );
+    cy.get('[data-cy="info"]')
+      .should("contain.text", `enviado há`)
+      .should("contain.text", `por u/${fakeArticle.author}`);
   });
 });

@@ -1,27 +1,40 @@
-# React + TypeScript + Vite
+# Desafio Winnin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site: https://desafio-winnin-drab.vercel.app/
 
-Currently, two official plugins are available:
+## Como rodar o projeto?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Instalar os pacotes
+$ yarn 
 
-## Expanding the ESLint configuration
+# Para rodar em modo de desenvolvimento
+$ yarn dev 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+# Para rodar como produção é necessário fazer o build e rodar como preview
+$ yarn build
+$ yarn preview
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Como rodar os testes?
+
+```bash
+# Para rodar os testes de componente
+$ yarn test
+
+# Para rodar os testes de integração
+$ yarn e2e
+```
+
+## Tecnologias usadas
+
+| Ferramenta | Site |
+|-----|------|
+|React + Vite| https://vitejs.dev/ |
+|Typescript| https://www.typescriptlang.org/ |
+|Styled Components| https://styled-components.com/|
+|Axios|https://axios-http.com/ptbr/|
+|React Query|https://tanstack.com/query/latest/|
+|Cypress.io|https://www.cypress.io/|
+|React Router|https://reactrouter.com/en/main|
+

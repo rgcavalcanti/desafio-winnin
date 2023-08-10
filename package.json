@@ -9,8 +9,10 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "cy:open": "cypress open",
-    "cy:e2e": "cypress run",
-    "cy:component": "cypress run --component"
+    "pree2e": "yarn dev &",
+    "e2e": "cypress run",
+    "poste2e": "killall node",
+    "test": "cypress run --component"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.32.6",

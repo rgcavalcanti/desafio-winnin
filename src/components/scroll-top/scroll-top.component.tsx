@@ -24,7 +24,6 @@ export const ScrollTop = () => {
     };
 
     document.addEventListener("scroll", handleScroll);
-
     return () => document.removeEventListener("scroll", handleScroll);
   });
 

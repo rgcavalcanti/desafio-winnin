@@ -32,6 +32,7 @@ export const Article: React.FC<Props> = ({ article }) => {
     </Card>
   );
 };
+
 const Card = styled.article`
   display: grid;
   grid-auto-flow: column;
