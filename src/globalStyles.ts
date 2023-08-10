@@ -33,6 +33,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-    transition: all ease-in-out 300ms;
+    transition: color ease-in-out 300ms, background-color ease-in-out 300ms;
   }
 `;
