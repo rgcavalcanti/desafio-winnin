@@ -53,6 +53,8 @@ const Thumbnail = styled.img`
   height: 50px;
   border-radius: 8px;
   display: inline-block;
+  object-fit: cover;
+  object-position: left;
 
   @media (min-width: 1024px) {
     width: 100px;
