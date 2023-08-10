@@ -1,19 +1,24 @@
 import { styled } from "styled-components";
 import { DarkModeIcon } from "../../icons/dark-mode.icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LightModeIcon } from "../../icons/light-mode.icon";
 
 export const ToggleTheme = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const theme = localStorage.getItem("theme");
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(theme === "dark");
+
+  useEffect(() => {
+    if (isDarkMode) {
+      localStorage.setItem("theme", "dark");
+      return document.body.classList.add("dark-mode");
+    } else {
+      localStorage.setItem("theme", "light");
+      return document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
 
   const toggleMode = () => {
     setIsDarkMode((oldState) => !oldState);
-
-    if (isDarkMode) {
-      return document.body.classList.remove("dark-mode");
-    } else {
-      return document.body.classList.add("dark-mode");
-    }
   };
 
   return (
