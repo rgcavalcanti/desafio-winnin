@@ -51,6 +51,11 @@ const Card = styled.article`
   align-items: center;
   padding: 1rem;
   border-top: 1px solid var(--color-grey);
+
+  @media (min-width: 1024px) {
+    align-items: unset;
+    padding: 1rem 0;
+  }
 `;
 
 const Thumbnail = styled.div`
@@ -58,6 +63,11 @@ const Thumbnail = styled.div`
   height: 50px;
   border-radius: 8px;
   animation: ${skeletonLoading} 1s linear infinite alternate;
+
+  @media (min-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const Content = styled.div`

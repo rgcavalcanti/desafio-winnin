@@ -103,7 +103,7 @@ const Domain = styled.a`
   font-size: 0.8rem;
 
   svg {
-    height: 100%;
+    height: 1rem;
   }
 
   &:hover {
